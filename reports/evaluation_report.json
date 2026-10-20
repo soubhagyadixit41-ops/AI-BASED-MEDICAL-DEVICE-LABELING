@@ -1,0 +1,920 @@
+{
+  "evaluation_set_size": 50,
+  "answerable_questions": 42,
+  "unanswerable_questions": 8,
+  "top_k": 5,
+  "retrieval_recall_at_k": 1.0,
+  "retrieval_mrr": 0.9761904761904762,
+  "retrieved_evidence_key_fact_hit_rate": 1.0,
+  "citation_metadata_correctness": 1.0,
+  "abstention_accuracy": 1.0,
+  "comparison_questions_missing_expected_source_count": 1,
+  "methodology": "TF-IDF retrieval over official-source chunks. Answerable metrics check whether expected source IDs and key facts appear in top-k retrieved passages. Abstention metric checks deterministic answer behavior for unanswerable records.",
+  "limitations": [
+    "Metrics are retrieval-grounded and deterministic; no paid LLM answer quality is claimed.",
+    "ISO standards are metadata-only because the full standards are copyrighted/paywalled.",
+    "EUR-Lex access can vary; the manifest records the actual download status."
+  ],
+  "details": [
+    {
+      "question_id": "Q001",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3176,
+        0.2608,
+        0.2531,
+        0.2277,
+        0.2243
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q002",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.4383,
+        0.3627,
+        0.3429,
+        0.3358,
+        0.3117
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q003",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3884,
+        0.387,
+        0.2803,
+        0.2116,
+        0.2093
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q004",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.5248,
+        0.2151,
+        0.1988,
+        0.1904,
+        0.1885
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q005",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3105,
+        0.2871,
+        0.2753,
+        0.2262,
+        0.1994
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q006",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.6302,
+        0.5653,
+        0.52,
+        0.2467,
+        0.2129
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q007",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3751,
+        0.3011,
+        0.2923,
+        0.2804,
+        0.275
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q008",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3673,
+        0.3551,
+        0.2651,
+        0.2284,
+        0.2108
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q009",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.2922,
+        0.2718,
+        0.2508,
+        0.199,
+        0.1904
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q010",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3061,
+        0.2068,
+        0.1999,
+        0.1976,
+        0.1949
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q011",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3451,
+        0.287,
+        0.218,
+        0.2016,
+        0.1968
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q012",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3002,
+        0.239,
+        0.217,
+        0.213,
+        0.2083
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q013",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3351,
+        0.2674,
+        0.2528,
+        0.2355,
+        0.2333
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q014",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.4028,
+        0.2698,
+        0.2599,
+        0.243,
+        0.2412
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q015",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.7405,
+        0.6125,
+        0.5636,
+        0.5492,
+        0.548
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q016",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3755,
+        0.325,
+        0.2915,
+        0.2904,
+        0.2816
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q017",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.381,
+        0.333,
+        0.3229,
+        0.3216,
+        0.3108
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q018",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.4282,
+        0.4141,
+        0.4086,
+        0.3815,
+        0.3671
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q019",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3546,
+        0.3519,
+        0.3491,
+        0.3396,
+        0.3323
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q020",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3781,
+        0.2934,
+        0.2903,
+        0.2857,
+        0.2729
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q021",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3375,
+        0.2279,
+        0.2199,
+        0.2169,
+        0.2067
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q022",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "imdrf_grrp_wg_n52_2024",
+        "ec_udi_device_registration",
+        "fda_udi_guidance"
+      ],
+      "top_scores": [
+        0.2757,
+        0.1276,
+        0.1138,
+        0.1118,
+        0.1013
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q023",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration"
+      ],
+      "top_scores": [
+        0.4299,
+        0.3353,
+        0.3343,
+        0.3115,
+        0.2923
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q024",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration"
+      ],
+      "top_scores": [
+        0.4638,
+        0.3232,
+        0.3174,
+        0.3076,
+        0.2982
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q025",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.2867,
+        0.1711,
+        0.162,
+        0.137,
+        0.1282
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q026",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration"
+      ],
+      "top_scores": [
+        0.601,
+        0.2843,
+        0.2652,
+        0.2395,
+        0.2349
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q027",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.228,
+        0.2229,
+        0.2168,
+        0.1886,
+        0.185
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q030",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_general_device_labeling",
+        "fda_udi_guidance",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.3898,
+        0.2811,
+        0.2647,
+        0.228,
+        0.2224
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q035",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.439,
+        0.2656,
+        0.2589,
+        0.2566,
+        0.2477
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q036",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_general_device_labeling",
+        "fda_specific_device_labeling",
+        "fda_specific_device_labeling"
+      ],
+      "top_scores": [
+        0.9494,
+        0.5663,
+        0.5529,
+        0.4102,
+        0.3246
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q037",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance",
+        "fda_general_device_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.4614,
+        0.2464,
+        0.2179,
+        0.2152,
+        0.1962
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q038",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_specific_device_labeling",
+        "fda_specific_device_labeling",
+        "fda_general_device_labeling"
+      ],
+      "top_scores": [
+        0.7021,
+        0.5705,
+        0.4357,
+        0.3575,
+        0.3019
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q039",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.328,
+        0.2731,
+        0.2611,
+        0.2368,
+        0.2322
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q040",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.3943,
+        0.3045,
+        0.265,
+        0.2564,
+        0.2554
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q041",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.3326,
+        0.2829,
+        0.2814,
+        0.2678,
+        0.2283
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q042",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance"
+      ],
+      "top_scores": [
+        0.4273,
+        0.4218,
+        0.357,
+        0.3319,
+        0.2625
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q043",
+      "top_sources": [
+        "fda_specific_device_labeling",
+        "fda_udi_guidance",
+        "fda_specific_device_labeling",
+        "fda_general_device_labeling",
+        "fda_general_device_labeling"
+      ],
+      "top_scores": [
+        0.7416,
+        0.7354,
+        0.6659,
+        0.2949,
+        0.2627
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q044",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3128,
+        0.2713,
+        0.2689,
+        0.2684,
+        0.2674
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q045",
+      "top_sources": [
+        "fda_specific_device_labeling",
+        "fda_specific_device_labeling",
+        "fda_general_device_labeling",
+        "fda_general_device_labeling",
+        "fda_general_device_labeling"
+      ],
+      "top_scores": [
+        0.5076,
+        0.3487,
+        0.2369,
+        0.218,
+        0.2018
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q046",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.3036,
+        0.274,
+        0.2733,
+        0.2418,
+        0.2366
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q047",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.5037,
+        0.2065,
+        0.2017,
+        0.1973,
+        0.1889
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q048",
+      "top_sources": [
+        "fda_general_device_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.3481,
+        0.2843,
+        0.2494,
+        0.2327,
+        0.2265
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q049",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "fda_udi_guidance",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration"
+      ],
+      "top_scores": [
+        0.1474,
+        0.1473,
+        0.1395,
+        0.1361,
+        0.1243
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q028",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "fda_qsr_labeling",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.1764,
+        0.154,
+        0.1183,
+        0.1071,
+        0.0892
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q029",
+      "top_sources": [
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "fda_qsr_labeling",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.1243,
+        0.0997,
+        0.0949,
+        0.0897,
+        0.0727
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q031",
+      "top_sources": [
+        "fda_udi_guidance",
+        "fda_udi_guidance",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "ec_udi_device_registration"
+      ],
+      "top_scores": [
+        0.3967,
+        0.2585,
+        0.2567,
+        0.2501,
+        0.2073
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q032",
+      "top_sources": [
+        "ec_udi_device_registration",
+        "ec_udi_device_registration",
+        "fda_udi_guidance",
+        "imdrf_grrp_wg_n52_2024",
+        "fda_udi_guidance"
+      ],
+      "top_scores": [
+        0.1612,
+        0.0382,
+        0.0355,
+        0.0334,
+        0.0327
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q033",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_general_device_labeling",
+        "fda_specific_device_labeling",
+        "fda_specific_device_labeling"
+      ],
+      "top_scores": [
+        0.1177,
+        0.1147,
+        0.0968,
+        0.0957,
+        0.0623
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q034",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024",
+        "imdrf_grrp_wg_n52_2024"
+      ],
+      "top_scores": [
+        0.1141,
+        0.0926,
+        0.0908,
+        0.0828,
+        0.0821
+      ],
+      "topk_expected_source_hit": true
+    },
+    {
+      "question_id": "Q050",
+      "top_sources": [
+        "fda_qsr_labeling",
+        "fda_qsr_labeling",
+        "fda_udi_guidance",
+        "fda_qsr_labeling",
+        "fda_qsr_labeling"
+      ],
+      "top_scores": [
+        0.2214,
+        0.2027,
+        0.2018,
+        0.1864,
+        0.1762
+      ],
+      "topk_expected_source_hit": true
+    }
+  ]
+}

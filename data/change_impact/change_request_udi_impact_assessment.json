@@ -1,0 +1,126 @@
+{
+  "change_id": "CR-UDI-2026-042",
+  "product_context": {
+    "product": "OrthoSpine Pedicle Screw System",
+    "market": "US",
+    "device_type": "Class III Spinal Implant",
+    "change_category": "UDI or identifier change",
+    "data_classification": "fictional demo input; no patient data"
+  },
+  "change_description": "Assigned new GS1 GTIN-14 (00812345678901) and updated 2D DataMatrix carrier for unit-of-use primary sterile packaging.",
+  "affected_label_elements": [
+    {
+      "element": "UDI",
+      "impact": "review_required",
+      "relationship": "Device identifier, catalog reference, or machine-readable UDI carrier update",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "This document is intended to assist labelers and FDA-accredited issuing agencies in complying with unique device identifier (UDI) labeling requirements, including by clarifying FDA’s interpretation of certain requirements under 21 CFR 801.40.\nSpecifically, this guidance describes the requirements for and FDA’s recommendations regarding the form and content of the UDI to help ensure that the UDIs d",
+      "reason": "Identifier or UDI changes directly impact product traceability, machine-readable labeling compliance (21 CFR 801.40), and regulatory database registration (EUDAMED/GUDID).",
+      "recommended_action": "Verify UDI-DI / Basic UDI-DI assignment, barcode print quality and verifier grade, and regulatory database submissions across all target jurisdictions.",
+      "missing_information": [
+        "UDI-DI or Basic UDI-DI affected status",
+        "identifier before and after the change"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    },
+    {
+      "element": "device identifier",
+      "impact": "review_required",
+      "relationship": "Device identifier, catalog reference, or machine-readable UDI carrier update",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "This document is intended to assist labelers and FDA-accredited issuing agencies in complying with unique device identifier (UDI) labeling requirements, including by clarifying FDA’s interpretation of certain requirements under 21 CFR 801.40.\nSpecifically, this guidance describes the requirements for and FDA’s recommendations regarding the form and content of the UDI to help ensure that the UDIs d",
+      "reason": "Identifier or UDI changes directly impact product traceability, machine-readable labeling compliance (21 CFR 801.40), and regulatory database registration (EUDAMED/GUDID).",
+      "recommended_action": "Verify UDI-DI / Basic UDI-DI assignment, barcode print quality and verifier grade, and regulatory database submissions across all target jurisdictions.",
+      "missing_information": [
+        "UDI-DI or Basic UDI-DI affected status",
+        "identifier before and after the change"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    }
+  ],
+  "supporting_evidence": [
+    {
+      "evidence_id": "EV001",
+      "chunk_id": "fda_udi_guidance:55309b9694e6",
+      "source_id": "fda_udi_guidance",
+      "source_title": "Unique Device Identification System: Form and Content of the Unique Device Identifier (UDI) Guidance for Industry and Food and Drug Administration Staff July 2021",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/unique-device-identification-system-form-and-content-unique-device-identifier-udi",
+      "page": null,
+      "section": "Page content",
+      "retrieval_score": 0.6672,
+      "excerpt": "This document is intended to assist labelers and FDA-accredited issuing agencies in complying with unique device identifier (UDI) labeling requirements, including by clarifying FDA’s interpretation of certain requirements under 21 CFR 801.40.\nSpecifically, this guidance describes the requirements for and FDA’s recommendations regarding the form and content of the UDI to help ensure that the UDIs developed under systems for the issuance of UDIs meet the objectives of the Unique Device Identification System Final Rule, 78 FR 58786 (September 24, 2013) ( UDI Rule )."
+    },
+    {
+      "evidence_id": "EV002",
+      "chunk_id": "fda_specific_device_labeling:7f584722b843",
+      "source_id": "fda_specific_device_labeling",
+      "source_title": "Labeling Requirements for Specific Devices",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/general-device-labeling-requirements/labeling-requirements-specific-devices",
+      "page": null,
+      "section": "(21 CFR 801.405 to 801.437)",
+      "retrieval_score": 0.534,
+      "excerpt": "(21 CFR 801.405 to 801.437)\nCertain devices require specific labeling which may include not only package labeling, but informational literature, patient release forms, performance testing, and/or specific tolerances or prohibitions on certain ingredients.\nThe following devices have additional labeling requirements:\nDenture repair or refitting kits 21 CFR 801.405 - Special labeling and directions are listed in this section.\nImpact resistant lenses in sunglasses and eyeglasses 21 CFR 801.410 - This section specifies that case hardening of glass lenses, statistical testing of plastic lenses, \"drop ball\" testing, and documentation of these activities are required.\nOzone emission levels 21 CFR 801.415 - This section specifies that ozone emission is restricted to levels below 0.05 parts per million in certain devices, and not permitted at all for use in any medical conditions for which there i"
+    }
+  ],
+  "reason_for_impact": [
+    {
+      "element": "UDI",
+      "reason": "Identifier or UDI changes directly impact product traceability, machine-readable labeling compliance (21 CFR 801.40), and regulatory database registration (EUDAMED/GUDID).",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    },
+    {
+      "element": "device identifier",
+      "reason": "Identifier or UDI changes directly impact product traceability, machine-readable labeling compliance (21 CFR 801.40), and regulatory database registration (EUDAMED/GUDID).",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    }
+  ],
+  "recommended_review_actions": [
+    {
+      "element": "UDI",
+      "action": "Verify UDI-DI / Basic UDI-DI assignment, barcode print quality and verifier grade, and regulatory database submissions across all target jurisdictions.",
+      "human_review_required": true
+    },
+    {
+      "element": "device identifier",
+      "action": "Verify UDI-DI / Basic UDI-DI assignment, barcode print quality and verifier grade, and regulatory database submissions across all target jurisdictions.",
+      "human_review_required": true
+    }
+  ],
+  "missing_information": [
+    "UDI-DI or Basic UDI-DI affected status",
+    "identifier before and after the change"
+  ],
+  "confidence_or_uncertainty": {
+    "overall": "medium",
+    "basis": "Structured multi-stage change analysis with jurisdiction-aware TF-IDF retrieval from official regulatory sources. This is not a compliance determination."
+  },
+  "human_review_required": true,
+  "source_coverage_limitations": [
+    "Outputs are informational and require qualified regulatory review by regulatory affairs professionals.",
+    "This platform does not certify regulatory compliance."
+  ]
+}

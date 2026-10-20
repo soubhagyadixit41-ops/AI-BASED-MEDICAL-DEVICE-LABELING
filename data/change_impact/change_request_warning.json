@@ -1,0 +1,28 @@
+{
+  "change_id": "CR-WARN-2026-108",
+  "product_name": "EndoGrip Biopsy Forceps",
+  "device_category": "Class II Endoscopic Device",
+  "target_market": "US",
+  "change_category": "Warning or precaution change",
+  "change_description": "Added contraindication regarding magnetic resonance imaging (MRI) scan environments exceeding 3 Tesla due to radiofrequency heating risks, and updated precaution text for reusable handle sterilization.",
+  "approved_product_facts": {
+    "mr_safety_status": "MR Conditional up to 3T",
+    "clinical_risk_assessment_id": "RA-2026-088",
+    "primary_contraindication": "Do not scan at >3 Tesla static magnetic field"
+  },
+  "existing_label_version": "v2.1",
+  "current_label_elements": [
+    "warnings",
+    "precautions",
+    "instructions for use",
+    "symbols",
+    "manufacturer name/address"
+  ],
+  "product_context": {
+    "product": "EndoGrip Biopsy Forceps",
+    "market": "US",
+    "device_type": "Class II Endoscopic Device",
+    "change_category": "Warning or precaution change",
+    "data_classification": "fictional demo input; no patient data"
+  }
+}
