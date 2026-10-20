@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LabelAI — Regulatory Labeling Intelligence Prototype
 
 > **Illustrative prototype only.** Outputs require qualified regulatory review and do not constitute a regulatory compliance determination.
@@ -199,3 +200,6 @@ All source access decisions are recorded in `data/sources/source_manifest.json`.
 - `reports/evaluation_report.json` — Evaluation results (100% Recall@5, 100% key-fact hit rate, 100% abstention)
 - `reports/test_results_summary.md` — Test results summary (47 passing automated tests)
 
+=======
+# AI-BASED-MEDICAL-DEVICE-LABELING
+>>>>>>> c0a9f0ab90e79b1b52a031881111080e1e95decf
