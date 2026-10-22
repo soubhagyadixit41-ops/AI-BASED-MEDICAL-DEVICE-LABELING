@@ -1,0 +1,6 @@
+label_id,product,market,language,dependent_fields,version
+L001,Device X100,EU,English,manufacturer_address;product_name,1.0
+L002,Device X100,EU,French,manufacturer_address;product_name,1.0
+L003,Device X100,India,English,manufacturer_address;product_name;importer_address,1.0
+L004,Device X200,EU,English,manufacturer_address;product_name,1.0
+L005,Device X100,EU,German,manufacturer_address;product_name,1.0
