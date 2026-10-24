@@ -1,0 +1,85 @@
+{
+  "change_id": "DEMO-CHANGE-001",
+  "product_context": {
+    "product": "illustrative cardiac stent",
+    "market": "US",
+    "device_type": "illustrative medical device",
+    "data_classification": "fictional demo input; no patient data"
+  },
+  "change_description": "Manufacturer address updated from the old office to a new office.",
+  "affected_label_elements": [
+    {
+      "element": "manufacturer name/address",
+      "impact": "review_required",
+      "evidence_state": "potentially_relevant",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    }
+  ],
+  "supporting_evidence": [
+    {
+      "evidence_id": "EV001",
+      "chunk_id": "imdrf_grrp_wg_n52_2024:2682e60867bd",
+      "source_id": "imdrf_grrp_wg_n52_2024",
+      "source_title": "Principles of Labelling for Medical Devices and IVD Medical Devices",
+      "publisher": "International Medical Device Regulators Forum",
+      "jurisdiction": "International",
+      "url": "https://www.imdrf.org/sites/default/files/2024-04/IMDRF%20GRRP%20WG%20N52%20%28Edition%202%29.pdf",
+      "page": 19,
+      "section": "5.2.9. The label should contain the name and address of the manufacturer in a",
+      "retrieval_score": 0.4269,
+      "excerpt": "IMDRF/GRRP WG/N52 FINAL:2024 (Edition 2)\n19 \n5.2.9.\nThe label should contain the name and address of the manufacturer in a \nformat that is recognizable and allows the location of the manufacturer to be \nestablished.\nThe address should contain information related to the physical \nlocation such as street/road, number/floor/house, city, state/region, postal \ncode, country, etc.\nAn abbreviated version of the address may be sufficient on \nthe label if providing the full address on the label is not practical, and if the \ndevice includes instructions for use that provide a full address.\nIf permitted by \nthe RA having jurisdiction, this principle may be fulfilled with a URL on the \nlabel that when accessed contains the full address of the manufacturer in a \nformat that is recognizable and allows the location of the manufacturer to be \nestablished.\n5.2.10.\nIf an authorized representative is actin"
+    },
+    {
+      "evidence_id": "EV002",
+      "chunk_id": "imdrf_grrp_wg_n52_2024:6a34c8cff249",
+      "source_id": "imdrf_grrp_wg_n52_2024",
+      "source_title": "Principles of Labelling for Medical Devices and IVD Medical Devices",
+      "publisher": "International Medical Device Regulators Forum",
+      "jurisdiction": "International",
+      "url": "https://www.imdrf.org/sites/default/files/2024-04/IMDRF%20GRRP%20WG%20N52%20%28Edition%202%29.pdf",
+      "page": 21,
+      "section": "5.3.4. Instructions for use may be provided to the user in paper or electronic format",
+      "retrieval_score": 0.1729,
+      "excerpt": "For example, the RA may \nspecify that the manufacturer should upon request provide a paper version \nfree of charge.\n5.3.7.\nThe instructions for use should contain the name or trade name of the medical \ndevice or IVD medical device.\n5.3.8.\nThe instructions for use should include a description of the medical device or \nIVD medical device and how it is intended to be used.\n5.3.9.\nThe instructions for use should contain the name and address of the \nmanufacturer in a format that is recognizable and allows the location of the \nmanufacturer to be established, together with contact information (e.g., \ntelephone number, fax number, website or email address) to obtain technical \nassistance, if such information is required by the RA having jurisdiction.\n5.3.10.\nThe instructions for use should state the medical device’s or IVD medical \ndevice’s intended use/purpose, including the indications for use"
+    }
+  ],
+  "reason_for_impact": [
+    {
+      "element": "manufacturer name/address",
+      "reason": "A manufacturer address change may affect label content that identifies the manufacturer and its location.",
+      "evidence_state": "potentially_relevant",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    }
+  ],
+  "recommended_review_actions": [
+    {
+      "element": "manufacturer name/address",
+      "action": "Review label and any related labeling locations that show manufacturer name or address; confirm market-specific requirements before release.",
+      "human_review_required": true
+    }
+  ],
+  "missing_information": [
+    "new manufacturer address",
+    "effective date of address change",
+    "markets where updated label will be distributed",
+    "US market requested, but FDA sources are not currently indexed because discovery/download failed. Available support is from international IMDRF principles only."
+  ],
+  "confidence_or_uncertainty": {
+    "overall": "low",
+    "basis": "Deterministic rule mapping plus TF-IDF retrieval from the current indexed corpus. This is not a compliance determination."
+  },
+  "human_review_required": true,
+  "source_coverage_limitations": [
+    "US market requested, but FDA sources are not currently indexed because discovery/download failed. Available support is from international IMDRF principles only.",
+    "The current indexed corpus is limited to IMDRF labeling principles and the European Commission UDI/Device Registration page.",
+    "Outputs are informational and require qualified regulatory review."
+  ]
+}

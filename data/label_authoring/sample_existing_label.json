@@ -1,0 +1,28 @@
+{
+  "label_id": "LBL-CARDIOFLEX-US-001",
+  "product_name": "CardioFlex Coronary Stent System",
+  "version": "Rev B",
+  "status": "approved",
+  "target_jurisdiction": "US",
+  "language": "en-US",
+  "fields": {
+    "product_name_identifier": "CardioFlex Coronary Stent System (Model CF-300-18, REF 90210)",
+    "manufacturer_info": "Manufactured by:\nVascular Dynamics Corp.\n100 Old Industrial Parkway, Suite 10, Minneapolis, MN 55401, USA",
+    "intended_purpose": "The CardioFlex Coronary Stent System is indicated for improving coronary luminal diameter in patients with symptomatic ischemic heart disease due to de novo native coronary artery lesions.",
+    "device_description": "Balloon-expandable cobalt-chromium (CoCr) coronary stent mounted on a rapid exchange delivery catheter system.",
+    "warnings_precautions": "Rx Only. Carefully inspect packaging for sterile barrier breach prior to opening. Do not use if temperature indicator is activated. Not evaluated for pediatric use.",
+    "instructions_for_use": "Refer to complete Instructions for Use (Doc ID IFU-CF-002) for detailed preparation, balloon inflation pressure charts, and post-dilatation protocols. Questions: contact 1-800-555-0199.",
+    "storage_handling": "Store at controlled room temperature 15°C to 25°C (59°F to 77°F). Excursions permitted up to 30°C. Protect from direct moisture and sunlight.",
+    "sterilization_info": "Sterilized using Ethylene Oxide gas (EO). Sterile barrier: Double Tyvek pouch. Do not resterilize.",
+    "shelf_life_expiry": "Shelf Life: 24 Months. Expiration date indicated on package label in YYYY-MM-DD format.",
+    "udi_identifiers": "UDI: (01)00850012345678(17)280430(10)LOT2026A(21)SN10098\nCarrier: GS1-128 Linear Barcode + 2D DataMatrix",
+    "symbols_descriptions": "Standardized ISO 15223-1 symbols utilized: Sterile EO, Do Not Resterilize, Consult Instructions for Use, Temperature Limit, Caution, Rx Only.",
+    "target_jurisdiction": "United States (FDA 21 CFR 801 / 820)",
+    "language": "English (US)",
+    "label_version_status": "Approved Master Label Rev B — Effective Date 2025-06-15"
+  },
+  "metadata": {
+    "document_owner": "Regulatory Affairs & Labeling Ops",
+    "fictional_demo_notice": "Illustrative sample label for demonstration purposes only."
+  }
+}

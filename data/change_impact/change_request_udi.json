@@ -1,0 +1,29 @@
+{
+  "change_id": "CR-UDI-2026-042",
+  "product_name": "OrthoSpine Pedicle Screw System",
+  "device_category": "Class III Spinal Implant",
+  "target_market": "US",
+  "change_category": "UDI or identifier change",
+  "change_description": "Assigned new GS1 GTIN-14 (00812345678901) and updated 2D DataMatrix carrier for unit-of-use primary sterile packaging.",
+  "approved_product_facts": {
+    "udi_di": "00812345678901",
+    "issuing_agency": "GS1",
+    "carrier_type": "2D DataMatrix + HRI",
+    "gudid_status": "pending_submission"
+  },
+  "existing_label_version": "Rev C",
+  "current_label_elements": [
+    "UDI",
+    "device identifier",
+    "manufacturer name/address",
+    "symbols",
+    "instructions for use"
+  ],
+  "product_context": {
+    "product": "OrthoSpine Pedicle Screw System",
+    "market": "US",
+    "device_type": "Class III Spinal Implant",
+    "change_category": "UDI or identifier change",
+    "data_classification": "fictional demo input; no patient data"
+  }
+}

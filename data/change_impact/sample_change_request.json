@@ -1,0 +1,18 @@
+{
+  "change_id": "DEMO-CHANGE-001",
+  "product_context": {
+    "product": "illustrative cardiac stent",
+    "market": "US",
+    "device_type": "illustrative medical device",
+    "data_classification": "fictional demo input; no patient data"
+  },
+  "change_description": "Manufacturer address updated from the old office to a new office.",
+  "current_label_elements": [
+    "manufacturer name/address",
+    "device identifier",
+    "UDI",
+    "warnings",
+    "symbols",
+    "instructions for use"
+  ]
+}

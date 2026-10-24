@@ -1,0 +1,190 @@
+{
+  "change_id": "CR-WARN-2026-108",
+  "product_context": {
+    "product": "EndoGrip Biopsy Forceps",
+    "market": "US",
+    "device_type": "Class II Endoscopic Device",
+    "change_category": "Warning or precaution change",
+    "data_classification": "fictional demo input; no patient data"
+  },
+  "change_description": "Added contraindication regarding magnetic resonance imaging (MRI) scan environments exceeding 3 Tesla due to radiofrequency heating risks, and updated precaution text for reusable handle sterilization.",
+  "affected_label_elements": [
+    {
+      "element": "warnings",
+      "impact": "review_required",
+      "relationship": "Safety warning, precaution, or contraindication risk disclosure revision",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "(21 CFR 801.405 to 801.437)\nCertain devices require specific labeling which may include not only package labeling, but informational literature, patient release forms, performance testing, and/or specific tolerances or prohibitions on certain ingredients.\nThe following devices have additional labeling requirements:\nDenture repair or refitting kits 21 CFR 801.405 - Special labeling and directions a",
+      "reason": "Safety-related modifications alter precautionary statements and clinical risk communication required on the device label and in the IFU.",
+      "recommended_action": "Review warnings, precautions, risk controls, and IFU sections with qualified regulatory, medical, and clinical reviewers.",
+      "missing_information": [
+        "risk assessment for the proposed change",
+        "clinical root-cause analysis or post-market surveillance data"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    },
+    {
+      "element": "instructions for use",
+      "impact": "review_required",
+      "relationship": "Safety warning, precaution, or contraindication risk disclosure revision",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "(21 CFR 801.405 to 801.437)\nCertain devices require specific labeling which may include not only package labeling, but informational literature, patient release forms, performance testing, and/or specific tolerances or prohibitions on certain ingredients.\nThe following devices have additional labeling requirements:\nDenture repair or refitting kits 21 CFR 801.405 - Special labeling and directions a",
+      "reason": "Safety-related modifications alter precautionary statements and clinical risk communication required on the device label and in the IFU.",
+      "recommended_action": "Review warnings, precautions, risk controls, and IFU sections with qualified regulatory, medical, and clinical reviewers.",
+      "missing_information": [
+        "risk assessment for the proposed change",
+        "clinical root-cause analysis or post-market surveillance data"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    },
+    {
+      "element": "symbols",
+      "impact": "review_required",
+      "relationship": "Sterility method, sterile barrier, or shelf-life stability expiration dating revision",
+      "evidence_state": "evidence_gap",
+      "evidence_refs": [
+        "EV003",
+        "EV004"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "The need for users to have instructions on how to open a sterile device package to avoid contamination of the device also needs to be evaluated, and when necessary, such instructions should be included in the labeling.\nWhen a manufacturer modifies a device, the manufacturer must also review the labeling to make certain that it reflects current revisions and specifications.\nSome manufacturers ident",
+      "reason": "Changes in sterilization or aging alter sterility status labeling, sterile barrier instructions, expiration dates, and sterile symbol disclosures under 21 CFR 820 and IMDRF.",
+      "recommended_action": "Review sterility symbol, expiration date format, sterile packaging seal instructions, and sterility validation protocols.",
+      "missing_information": [
+        "sterilization validation report (ISO 11135 or ISO 11137)",
+        "real-time or accelerated aging stability test results"
+      ],
+      "unsupported_by_current_corpus": true,
+      "human_review_required": true
+    }
+  ],
+  "supporting_evidence": [
+    {
+      "evidence_id": "EV001",
+      "chunk_id": "fda_specific_device_labeling:7f584722b843",
+      "source_id": "fda_specific_device_labeling",
+      "source_title": "Labeling Requirements for Specific Devices",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/general-device-labeling-requirements/labeling-requirements-specific-devices",
+      "page": null,
+      "section": "(21 CFR 801.405 to 801.437)",
+      "retrieval_score": 0.73,
+      "excerpt": "(21 CFR 801.405 to 801.437)\nCertain devices require specific labeling which may include not only package labeling, but informational literature, patient release forms, performance testing, and/or specific tolerances or prohibitions on certain ingredients.\nThe following devices have additional labeling requirements:\nDenture repair or refitting kits 21 CFR 801.405 - Special labeling and directions are listed in this section.\nImpact resistant lenses in sunglasses and eyeglasses 21 CFR 801.410 - This section specifies that case hardening of glass lenses, statistical testing of plastic lenses, \"drop ball\" testing, and documentation of these activities are required.\nOzone emission levels 21 CFR 801.415 - This section specifies that ozone emission is restricted to levels below 0.05 parts per million in certain devices, and not permitted at all for use in any medical conditions for which there i"
+    },
+    {
+      "evidence_id": "EV002",
+      "chunk_id": "fda_specific_device_labeling:d43c3d2ebb9d",
+      "source_id": "fda_specific_device_labeling",
+      "source_title": "Labeling Requirements for Specific Devices",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/general-device-labeling-requirements/labeling-requirements-specific-devices",
+      "page": null,
+      "section": "(21 CFR 801.405 to 801.437)",
+      "retrieval_score": 0.5967,
+      "excerpt": "Chlorofluorocarbons or other ozone depleting substances 21 CFR 801.433 - This section contains specific warning statements for all prescription and restricted devices containing or manufactured with chlorofluorocarbons, halons, carbon tetrachloride, methyl chloride, or any other Class I substance designated by the U.S.\nEPA.\nLatex condoms 21 CFR 801.435 - This section contains specific requirements for user labeling including data related to natural integrity, expiration dating requirements, storage conditions and inclusion of spermicidal ingredients.\nDevices containing natural rubber 21 CFR 801.437 - This section contains information related to the definities of latex, natural rubber, and human contact and specific informational and caution requirements and restrictions related to the composition of the device."
+    },
+    {
+      "evidence_id": "EV003",
+      "chunk_id": "fda_qsr_labeling:0c2905f33ca5",
+      "source_id": "fda_qsr_labeling",
+      "source_title": "Quality System Regulation Labeling Requirements",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/device-labeling/quality-system-regulation-labeling-requirements",
+      "page": null,
+      "section": "Sterile Device Labeling",
+      "retrieval_score": 0.2875,
+      "excerpt": "The need for users to have instructions on how to open a sterile device package to avoid contamination of the device also needs to be evaluated, and when necessary, such instructions should be included in the labeling.\nWhen a manufacturer modifies a device, the manufacturer must also review the labeling to make certain that it reflects current revisions and specifications.\nSome manufacturers identify labeling with a drawing number plus a revision code or date as an aid in identifying current labeling.\nThe package insert or other labeling for in vitro diagnostic products is required to contain the revision date [ 21 CFR 809.10 (b)(15)].\nShelf-life dating solely for package integrity and sterility is not usually required by FDA for general medical devices.\nThere may be a need for expiration dating when a particular component of a device, such as a battery or diagnostic reagent, has a finit"
+    },
+    {
+      "evidence_id": "EV004",
+      "chunk_id": "fda_qsr_labeling:6ee42a97532a",
+      "source_id": "fda_qsr_labeling",
+      "source_title": "Quality System Regulation Labeling Requirements",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/device-labeling/quality-system-regulation-labeling-requirements",
+      "page": null,
+      "section": "On this page:",
+      "retrieval_score": 0.1915,
+      "excerpt": "On this page:\nIntroduction\nSpecific Requirements for Labeling\nSterile Device Labeling\nContract Sterilization"
+    }
+  ],
+  "reason_for_impact": [
+    {
+      "element": "warnings",
+      "reason": "Safety-related modifications alter precautionary statements and clinical risk communication required on the device label and in the IFU.",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    },
+    {
+      "element": "instructions for use",
+      "reason": "Safety-related modifications alter precautionary statements and clinical risk communication required on the device label and in the IFU.",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    },
+    {
+      "element": "symbols",
+      "reason": "Changes in sterilization or aging alter sterility status labeling, sterile barrier instructions, expiration dates, and sterile symbol disclosures under 21 CFR 820 and IMDRF.",
+      "evidence_state": "evidence_gap",
+      "evidence_refs": [
+        "EV003",
+        "EV004"
+      ]
+    }
+  ],
+  "recommended_review_actions": [
+    {
+      "element": "warnings",
+      "action": "Review warnings, precautions, risk controls, and IFU sections with qualified regulatory, medical, and clinical reviewers.",
+      "human_review_required": true
+    },
+    {
+      "element": "instructions for use",
+      "action": "Review warnings, precautions, risk controls, and IFU sections with qualified regulatory, medical, and clinical reviewers.",
+      "human_review_required": true
+    },
+    {
+      "element": "symbols",
+      "action": "Review sterility symbol, expiration date format, sterile packaging seal instructions, and sterility validation protocols.",
+      "human_review_required": true
+    }
+  ],
+  "missing_information": [
+    "risk assessment for the proposed change",
+    "clinical root-cause analysis or post-market surveillance data",
+    "sterilization validation report (ISO 11135 or ISO 11137)",
+    "real-time or accelerated aging stability test results",
+    "Full text of ISO 15223-1 and ISO 20417 is copyrighted/paywalled and not indexed in this corpus."
+  ],
+  "confidence_or_uncertainty": {
+    "overall": "low",
+    "basis": "Structured multi-stage change analysis with jurisdiction-aware TF-IDF retrieval from official regulatory sources. This is not a compliance determination."
+  },
+  "human_review_required": true,
+  "source_coverage_limitations": [
+    "Full text of ISO 15223-1 and ISO 20417 is copyrighted/paywalled and not indexed in this corpus.",
+    "Outputs are informational and require qualified regulatory review by regulatory affairs professionals.",
+    "This platform does not certify regulatory compliance."
+  ]
+}

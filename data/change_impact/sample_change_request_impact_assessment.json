@@ -1,0 +1,128 @@
+{
+  "change_id": "DEMO-CHANGE-001",
+  "product_context": {
+    "product": "illustrative cardiac stent",
+    "market": "US",
+    "device_type": "illustrative medical device",
+    "data_classification": "fictional demo input; no patient data"
+  },
+  "change_description": "Manufacturer address updated from the old office to a new office.",
+  "affected_label_elements": [
+    {
+      "element": "manufacturer name/address",
+      "impact": "review_required",
+      "relationship": "Direct manufacturer identity and registered address update on product label and packaging",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "Name and Place of Business ( 21 CFR 801.1 )\nThe label of a device shall contain the name and place of business of manufacturer, packer, or distributor including the street address, city, state, and zip code.\nIf the firm's street address is in the local telephone directory, the street address can be omitted.\nIf the firm listed on the label is not the manufacturer, the firm information must be quali",
+      "reason": "A manufacturer address change directly affects label content identifying the manufacturer and its physical or registered location under 21 CFR 801.1 and IMDRF Section 5.2.9.",
+      "recommended_action": "Review product label, packaging, IFU, and regulatory registrations showing manufacturer name or address; confirm territory-specific address requirements before release.",
+      "missing_information": [
+        "new manufacturer address",
+        "effective date of address change",
+        "markets where updated label will be distributed"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    },
+    {
+      "element": "instructions for use",
+      "impact": "review_required",
+      "relationship": "Direct manufacturer identity and registered address update on product label and packaging",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "jurisdiction": "US",
+      "relevant_excerpt": "Name and Place of Business ( 21 CFR 801.1 )\nThe label of a device shall contain the name and place of business of manufacturer, packer, or distributor including the street address, city, state, and zip code.\nIf the firm's street address is in the local telephone directory, the street address can be omitted.\nIf the firm listed on the label is not the manufacturer, the firm information must be quali",
+      "reason": "A manufacturer address change directly affects label content identifying the manufacturer and its physical or registered location under 21 CFR 801.1 and IMDRF Section 5.2.9.",
+      "recommended_action": "Review product label, packaging, IFU, and regulatory registrations showing manufacturer name or address; confirm territory-specific address requirements before release.",
+      "missing_information": [
+        "new manufacturer address",
+        "effective date of address change",
+        "markets where updated label will be distributed"
+      ],
+      "unsupported_by_current_corpus": false,
+      "human_review_required": true
+    }
+  ],
+  "supporting_evidence": [
+    {
+      "evidence_id": "EV001",
+      "chunk_id": "fda_general_device_labeling:c4f846865949",
+      "source_id": "fda_general_device_labeling",
+      "source_title": "General Device Labeling Requirements",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/device-labeling/general-device-labeling-requirements",
+      "page": null,
+      "section": "Name and Place of Business ( 21 CFR 801.1 )",
+      "retrieval_score": 0.8342,
+      "excerpt": "Name and Place of Business ( 21 CFR 801.1 )\nThe label of a device shall contain the name and place of business of manufacturer, packer, or distributor including the street address, city, state, and zip code.\nIf the firm's street address is in the local telephone directory, the street address can be omitted.\nIf the firm listed on the label is not the manufacturer, the firm information must be qualified by an appropriate statement such as, \"Manufactured for...\" or \"Distributed by....\""
+    },
+    {
+      "evidence_id": "EV002",
+      "chunk_id": "fda_qsr_labeling:bab83e72703b",
+      "source_id": "fda_qsr_labeling",
+      "source_title": "Quality System Regulation Labeling Requirements",
+      "publisher": "U.S. Food and Drug Administration",
+      "jurisdiction": "United States",
+      "url": "https://www.fda.gov/medical-devices/device-labeling/quality-system-regulation-labeling-requirements",
+      "page": null,
+      "section": "Contract Sterilization",
+      "retrieval_score": 0.4142,
+      "excerpt": "Contract Sterilization\nFinished devices that are terminally sterilized by a firm other than the manufacturer pose a unique labeling problem.\nA common industry practice is to send the finished device in its final packaging to a contractor for sterilization.\nThe final packaging is labeled as sterile even though the goods are unsterile during shipment from the manufacturer to the contractor.\nSpecific restrictions apply in this instance, and a written agreement between the parties must be in effect [ 21 CFR 801.150 (e)].\nThe requirements for the labeling of in process sterile goods in transit to the contract sterilizer are addressed in detail by 21 CFR 801.150 , and covered under Other Labeling Exemptions .\nCare must be taken in this situation to eliminate the possibility of an unsterilized product being mistaken for a sterilized product.\nA firm should seriously consider the use of \"visual i"
+    }
+  ],
+  "reason_for_impact": [
+    {
+      "element": "manufacturer name/address",
+      "reason": "A manufacturer address change directly affects label content identifying the manufacturer and its physical or registered location under 21 CFR 801.1 and IMDRF Section 5.2.9.",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    },
+    {
+      "element": "instructions for use",
+      "reason": "A manufacturer address change directly affects label content identifying the manufacturer and its physical or registered location under 21 CFR 801.1 and IMDRF Section 5.2.9.",
+      "evidence_state": "evidence_supported",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ]
+    }
+  ],
+  "recommended_review_actions": [
+    {
+      "element": "manufacturer name/address",
+      "action": "Review product label, packaging, IFU, and regulatory registrations showing manufacturer name or address; confirm territory-specific address requirements before release.",
+      "human_review_required": true
+    },
+    {
+      "element": "instructions for use",
+      "action": "Review product label, packaging, IFU, and regulatory registrations showing manufacturer name or address; confirm territory-specific address requirements before release.",
+      "human_review_required": true
+    }
+  ],
+  "missing_information": [
+    "new manufacturer address",
+    "effective date of address change",
+    "markets where updated label will be distributed"
+  ],
+  "confidence_or_uncertainty": {
+    "overall": "medium",
+    "basis": "Structured multi-stage change analysis with jurisdiction-aware TF-IDF retrieval from official regulatory sources. This is not a compliance determination."
+  },
+  "human_review_required": true,
+  "source_coverage_limitations": [
+    "Outputs are informational and require qualified regulatory review by regulatory affairs professionals.",
+    "This platform does not certify regulatory compliance."
+  ]
+}

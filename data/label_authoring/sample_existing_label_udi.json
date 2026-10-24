@@ -1,0 +1,28 @@
+{
+  "label_id": "LBL-ORTHOSPINE-US-001",
+  "product_name": "OrthoSpine Pedicle Screw System",
+  "version": "Rev C",
+  "status": "approved",
+  "target_jurisdiction": "US",
+  "language": "en-US",
+  "fields": {
+    "product_name_identifier": "OrthoSpine Pedicle Screw System 6.5mm x 45mm (REF OS-6545)",
+    "manufacturer_info": "Manufactured by:\nBioSpine Implants Inc.\n200 Orthopedic Way, Memphis, TN 38101, USA",
+    "intended_purpose": "Indicated for immobilization and stabilization of spinal segments in thoracic, lumbar, and sacral spine.",
+    "device_description": "Ti-6Al-4V titanium alloy polyaxial spinal pedicle screw with dual-lead thread profile.",
+    "warnings_precautions": "Rx Only. Single use only. Do not reuse or resterilize. Use only with dedicated OrthoSpine instrumentation.",
+    "instructions_for_use": "Refer to OrthoSpine Surgical Technique Manual (STM-OS-004) for trajectory preparation and torque limits.",
+    "storage_handling": "Store in dry environment at ambient temperature. Keep within protective carton until point of surgery.",
+    "sterilization_info": "Sterilized by Gamma Radiation (R). Sterile barrier: Sealed blister tray.",
+    "shelf_life_expiry": "Shelf Life: 5 Years from date of irradiation. Expiration date on box label.",
+    "udi_identifiers": "UDI: (01)00812300000018(17)311231(10)LOT9981(21)SN55432\nCarrier: Linear Code 128 barcode",
+    "symbols_descriptions": "ISO 15223-1 symbols: Sterile R, Do Not Resterilize, Caution, Consult Instructions for Use, Rx Only.",
+    "target_jurisdiction": "United States (FDA 21 CFR 801 / 820)",
+    "language": "English (US)",
+    "label_version_status": "Approved Master Label Rev C"
+  },
+  "metadata": {
+    "device_class": "Class III",
+    "gudid_status": "published"
+  }
+}

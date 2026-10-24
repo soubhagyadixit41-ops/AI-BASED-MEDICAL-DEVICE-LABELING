@@ -1,0 +1,12 @@
+{
+  "change_id": "CR-UDI-2026-042",
+  "product_name": "OrthoSpine Pedicle Screw System",
+  "change_category": "UDI or identifier change",
+  "udi_di": "00812345678901",
+  "gtin": "00812345678901",
+  "carrier_type": "2D DataMatrix + Human Readable Interpretation (GS1-compliant)",
+  "issuing_agency": "GS1",
+  "gudid_status": "pending_submission",
+  "effective_date": "2026-12-01",
+  "target_market": "US"
+}

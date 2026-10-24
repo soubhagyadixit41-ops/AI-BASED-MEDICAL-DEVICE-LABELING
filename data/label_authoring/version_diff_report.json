@@ -1,0 +1,202 @@
+{
+  "report_id": "DIFF-LBL-CARDIOFLEX-US-001-Rev C",
+  "label_id": "LBL-CARDIOFLEX-US-001",
+  "from_version": "Rev B",
+  "to_version": "Rev C",
+  "target_jurisdiction": "US",
+  "total_fields": 14,
+  "modified_fields": 2,
+  "unchanged_fields": 12,
+  "added_fields": 0,
+  "removed_fields": 0,
+  "field_diffs": [
+    {
+      "field_id": "product_name_identifier",
+      "label_name": "Product Name & Model / Catalog Number",
+      "original_value": "CardioFlex Coronary Stent System (Model CF-300-18, REF 90210)",
+      "proposed_value": "CardioFlex Coronary Stent System (Model CF-300-18, REF 90210)",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "manufacturer_info",
+      "label_name": "Manufacturer Name, Place of Business & Address",
+      "original_value": "Manufactured by:\nVascular Dynamics Corp.\n100 Old Industrial Parkway, Suite 10, Minneapolis, MN 55401, USA",
+      "proposed_value": "Manufactured by:\nVascular Dynamics Corp.\n450 Enterprise Boulevard, Suite 500, Boston, MA 02110, USA",
+      "change_type": "modified",
+      "reason_for_change": "Updated manufacturer location per approved product facts in compliance with 21 CFR 801.1 and IMDRF Section 5.2.9.",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "evidence_state": "evidence_supported",
+      "review_status": "Pending",
+      "reviewer_notes": "Requires qualified regulatory review before release."
+    },
+    {
+      "field_id": "intended_purpose",
+      "label_name": "Intended Purpose & Indications for Use",
+      "original_value": "The CardioFlex Coronary Stent System is indicated for improving coronary luminal diameter in patients with symptomatic ischemic heart disease due to de novo native coronary artery lesions.",
+      "proposed_value": "The CardioFlex Coronary Stent System is indicated for improving coronary luminal diameter in patients with symptomatic ischemic heart disease due to de novo native coronary artery lesions.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "device_description",
+      "label_name": "Device Description & Technical Specifications",
+      "original_value": "Balloon-expandable cobalt-chromium (CoCr) coronary stent mounted on a rapid exchange delivery catheter system.",
+      "proposed_value": "Balloon-expandable cobalt-chromium (CoCr) coronary stent mounted on a rapid exchange delivery catheter system.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "warnings_precautions",
+      "label_name": "Warnings, Precautions & Contraindications",
+      "original_value": "Rx Only. Carefully inspect packaging for sterile barrier breach prior to opening. Do not use if temperature indicator is activated. Not evaluated for pediatric use.",
+      "proposed_value": "Rx Only. Carefully inspect packaging for sterile barrier breach prior to opening. Do not use if temperature indicator is activated. Not evaluated for pediatric use.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "instructions_for_use",
+      "label_name": "Instructions for Use (IFU) & Directions",
+      "original_value": "Refer to complete Instructions for Use (Doc ID IFU-CF-002) for detailed preparation, balloon inflation pressure charts, and post-dilatation protocols. Questions: contact 1-800-555-0199.",
+      "proposed_value": "Refer to complete Instructions for Use (Doc ID IFU-CF-002) for detailed preparation, balloon inflation pressure charts, and post-dilatation protocols. Questions: contact 1-800-555-0199.\n\n[IFU Contact Update]: Inquiries and adverse event reports: 450 Enterprise Boulevard, Suite 500, Boston, MA 02110, USA",
+      "change_type": "modified",
+      "reason_for_change": "Synchronized IFU contact and safety sections with approved product changes.",
+      "evidence_refs": [
+        "EV001",
+        "EV002"
+      ],
+      "evidence_state": "evidence_supported",
+      "review_status": "Pending",
+      "reviewer_notes": "Requires qualified regulatory review before release."
+    },
+    {
+      "field_id": "storage_handling",
+      "label_name": "Storage & Handling Conditions",
+      "original_value": "Store at controlled room temperature 15\u00b0C to 25\u00b0C (59\u00b0F to 77\u00b0F). Excursions permitted up to 30\u00b0C. Protect from direct moisture and sunlight.",
+      "proposed_value": "Store at controlled room temperature 15\u00b0C to 25\u00b0C (59\u00b0F to 77\u00b0F). Excursions permitted up to 30\u00b0C. Protect from direct moisture and sunlight.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "sterilization_info",
+      "label_name": "Sterilization Method & Sterile Barrier Status",
+      "original_value": "Sterilized using Ethylene Oxide gas (EO). Sterile barrier: Double Tyvek pouch. Do not resterilize.",
+      "proposed_value": "Sterilized using Ethylene Oxide gas (EO). Sterile barrier: Double Tyvek pouch. Do not resterilize.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "shelf_life_expiry",
+      "label_name": "Shelf-Life & Expiration Dating",
+      "original_value": "Shelf Life: 24 Months. Expiration date indicated on package label in YYYY-MM-DD format.",
+      "proposed_value": "Shelf Life: 24 Months. Expiration date indicated on package label in YYYY-MM-DD format.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "udi_identifiers",
+      "label_name": "UDI (DI + PI) & Machine-Readable Carrier",
+      "original_value": "UDI: (01)00850012345678(17)280430(10)LOT2026A(21)SN10098\nCarrier: GS1-128 Linear Barcode + 2D DataMatrix",
+      "proposed_value": "UDI: (01)00850012345678(17)280430(10)LOT2026A(21)SN10098\nCarrier: GS1-128 Linear Barcode + 2D DataMatrix",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "symbols_descriptions",
+      "label_name": "Graphical Symbols & Symbol Descriptions",
+      "original_value": "Standardized ISO 15223-1 symbols utilized: Sterile EO, Do Not Resterilize, Consult Instructions for Use, Temperature Limit, Caution, Rx Only.",
+      "proposed_value": "Standardized ISO 15223-1 symbols utilized: Sterile EO, Do Not Resterilize, Consult Instructions for Use, Temperature Limit, Caution, Rx Only.",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "target_jurisdiction",
+      "label_name": "Target Regulatory Jurisdiction",
+      "original_value": "United States (FDA 21 CFR 801 / 820)",
+      "proposed_value": "United States (FDA 21 CFR 801 / 820)",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "language",
+      "label_name": "Label Language(s)",
+      "original_value": "English (US)",
+      "proposed_value": "English (US)",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    },
+    {
+      "field_id": "label_version_status",
+      "label_name": "Label Version & Status",
+      "original_value": "Approved Master Label Rev B \u2014 Effective Date 2025-06-15",
+      "proposed_value": "Approved Master Label Rev B \u2014 Effective Date 2025-06-15",
+      "change_type": "unchanged",
+      "reason_for_change": "Section not identified as impacted by change assessment; preserved unchanged.",
+      "evidence_refs": [],
+      "evidence_state": "not_applicable",
+      "review_status": "Accepted",
+      "reviewer_notes": "Unchanged from previous approved label version."
+    }
+  ],
+  "overall_human_review_required": true,
+  "missing_information": [
+    "new manufacturer address",
+    "effective date of address change",
+    "markets where updated label will be distributed"
+  ],
+  "limitations": [
+    "Outputs are informational and require qualified regulatory review by regulatory affairs professionals.",
+    "This platform does not certify regulatory compliance."
+  ],
+  "metadata": {
+    "authoring_timestamp": "2026-10-13T20:52:07.689469",
+    "regulatory_disclaimer": "Proposed draft requires qualified regulatory review. Does not constitute regulatory compliance determination."
+  }
+}
