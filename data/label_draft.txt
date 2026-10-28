@@ -4,7 +4,7 @@ LABEL DRAFT — DEVICE X100
 Status: DRAFT — HUMAN REVIEW REQUIRED
 
 User query:
-What is the product name and manufacturer?
+What information should a medical device label include?
 
 RETRIEVED REFERENCE INFORMATION
 Product name: Device X100

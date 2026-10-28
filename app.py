@@ -1,6 +1,8 @@
 from pathlib import Path
+import html
 import pandas as pd
 import streamlit as st
+import requests
 
 from engines.change_impact import find_affected_labels
 from engines.compliance_risk import check_label
@@ -884,21 +886,33 @@ def page_header(eyebrow, title, description):
     st.markdown(f'<div class="hero-title">{title}</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="hero-copy">{description}</div>', unsafe_allow_html=True)
 
+
 def get_affected(product="Device X100", field="manufacturer_address"):
     if labels.empty:
         return pd.DataFrame()
+
     try:
-        return find_affected_labels(
-            {
-                "change_id": "CR-001",
+        response = requests.post(
+            "http://127.0.0.1:8000/api/change-impact",
+            json={
                 "product": product,
                 "changed_field": field,
             },
-            labels,
+            timeout=30,
         )
-    except Exception as exc:
-        st.error(f"Change impact calculation failed: {exc}")
+        response.raise_for_status()
+        data = response.json()
+
+        return pd.DataFrame(data.get("affected_labels", []))
+
+    except requests.RequestException as exc:
+        st.error(
+            "Could not connect to the LabelGuard AI backend. "
+            "Make sure FastAPI is running on port 8000. "
+            f"Details: {exc}"
+        )
         return pd.DataFrame()
+
 
 def show_artwork():
     columns = st.columns(3)
@@ -1310,42 +1324,79 @@ elif page == "Label Studio":
     with review_col:
         st.subheader("Required-field check")
         st.write("Checks only the demo fields: product name, manufacturer, and intended use.")
+
         if st.button("Check fields", use_container_width=True):
-            findings, checks = check_label(
-                {
-                    "product_name": product_name,
-                    "manufacturer": manufacturer,
-                    "intended_use": intended_use,
-                }
-            )
-            st.session_state["label_findings"] = findings
-            st.session_state["label_checks"] = checks
+            try:
+                response = requests.post(
+                    "http://127.0.0.1:8000/api/compliance-risk",
+                    json={
+                        "product_name": product_name.strip(),
+                        "manufacturer": manufacturer.strip(),
+                        "intended_use": intended_use.strip(),
+                    },
+                    timeout=30,
+                )
+                response.raise_for_status()
+                result = response.json()
+
+                st.session_state["label_findings"] = result.get("findings", [])
+                st.session_state["label_checks"] = result.get("total_checks", 3)
+                st.session_state["compliance_api_result"] = result
+                st.success("Required-field check completed by the backend.")
+            except requests.RequestException as exc:
+                st.error(
+                    "Could not connect to the compliance backend. "
+                    "Ensure FastAPI is running on port 8000."
+                )
+                st.caption(str(exc))
+            except (ValueError, TypeError) as exc:
+                st.error("The backend returned an unexpected response.")
+                st.caption(str(exc))
+
         if "label_findings" in st.session_state:
-            st.metric("Fields checked", st.session_state.get("label_checks", 0))
             findings = st.session_state["label_findings"]
-            st.metric("Fields needing review", len(findings))
+            checks = st.session_state.get("label_checks", 3)
+            result_cols = st.columns(2)
+            result_cols[0].metric("Fields checked", checks)
+            result_cols[1].metric("Fields needing review", len(findings))
+
             if findings:
+                st.warning("Review the following field finding(s):")
                 for finding in findings:
-                    st.warning(f"{finding.get('risk', 'Review')} — {finding.get('finding', 'Field requires review')}")
+                    if isinstance(finding, dict):
+                        risk = finding.get("risk", "Review")
+                        message = finding.get(
+                            "finding", finding.get("message", "Field requires review")
+                        )
+                        st.write(f"**{risk}** — {message}")
+                    else:
+                        st.write(f"• {finding}")
             else:
                 st.success("All demo-required fields are present.")
-    if "label_preview" in st.session_state:
-        preview = st.session_state["label_preview"]
-        st.markdown("---")
-        st.subheader("Label preview")
-        st.markdown(
-            f"""
-            <div class="panel">
-              <div class="eyebrow">DEMONSTRATION LABEL</div>
-              <h2>{preview['product_name'] or 'Product name needs review'}</h2>
-              <p><strong>Manufacturer</strong><br>{preview['manufacturer'] or 'Needs review'}</p>
-              <p><strong>Intended use</strong><br>{preview['intended_use'] or 'Needs review'}</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
+
+        if "label_preview" in st.session_state:
+            preview = st.session_state["label_preview"]
+            st.markdown("---")
+            st.subheader("Label preview")
+            st.markdown(
+                f"""
+                <div class="panel">
+                  <div class="eyebrow">DEMONSTRATION LABEL</div>
+                  <h2>{html.escape(preview['product_name'] or 'Product name needs review')}</h2>
+                  <p><strong>Manufacturer</strong><br>{html.escape(preview['manufacturer'] or 'Needs review')}</p>
+                  <p><strong>Intended use</strong><br>{html.escape(preview['intended_use'] or 'Needs review')}</p>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.warning(
+                "Preview only. It is not a validated label and requires qualified human review."
+            )
+
+        st.info(
+            "This tool does not establish regulatory compliance or release a production label."
         )
-        st.warning("Preview only. It is not a validated label and requires qualified human review.")
-    st.info("This tool does not establish regulatory compliance or release a production label.")
+
     footer()
 
 # =========================================================
@@ -1358,6 +1409,62 @@ elif page == "Artwork Review":
         "Compare the supplied example artwork and inspect highlighted pixel differences.",
     )
     show_artwork()
+
+    st.subheader("Generate demo artwork through FastAPI")
+    artwork_address = st.text_input(
+        "Manufacturer address",
+        "Example Medical Ltd., 123 Demo Street",
+        key="artwork_api_address",
+    )
+
+    if st.button("Generate artwork via backend", type="primary"):
+        if not artwork_address.strip():
+            st.warning("Please enter a manufacturer address first.")
+        else:
+            try:
+                response = requests.post(
+                    "http://127.0.0.1:8000/api/artwork/create",
+                    json={"address": artwork_address.strip()},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                result = response.json()
+                st.session_state["artwork_api_result"] = result
+
+                if result.get("status") == "success":
+                    st.success("Demo artwork generated successfully through FastAPI.")
+                    image_path = result.get("image_path", "")
+                    st.write("Generated image path:", image_path or "Not returned")
+                    st.caption(result.get("note", ""))
+
+                    if image_path:
+                        generated_image = Path(image_path)
+                        if not generated_image.is_absolute():
+                            generated_image = BASE_DIR / generated_image
+
+                        if generated_image.exists():
+                            st.image(
+                                str(generated_image),
+                                caption="Generated demo artwork",
+                                use_container_width=True,
+                            )
+                        else:
+                            st.warning(
+                                "The generated image file was not found at the returned path. "
+                                "Check that the backend saves it inside the project data folder."
+                            )
+                else:
+                    st.error(f"Artwork generation returned: {result}")
+
+            except requests.RequestException as exc:
+                st.error(
+                    "Could not connect to the artwork backend. "
+                    "Ensure FastAPI is running on port 8000."
+                )
+                st.caption(str(exc))
+            except (ValueError, TypeError) as exc:
+                st.error(f"The backend returned an unexpected response: {exc}")
+
     st.markdown(
         '<div class="warning-banner"><strong>Review limitation:</strong> '
         'Pixel differences can flag visual changes, but they do not determine '
@@ -1375,52 +1482,88 @@ elif page == "AI Draft Lab":
         "AI Draft Lab",
         "Retrieve relevant chunks from the supplied demo reference and preview a template-based draft.",
     )
+
     query = st.text_input(
         "What information do you want to find?",
         "What is the product name and manufacturer?",
     )
-    retrieval_count = st.slider("Reference chunks to retrieve", 1, 5, 3)
+    retrieval_count = st.slider(
+        "Reference chunks to retrieve", 1, 5, 3
+    )
 
     if st.button("Retrieve references and prepare draft", type="primary"):
-        try:
-            from engines.genai_labeling import (
-                load_reference_chunks,
-                retrieve_references,
-                generate_demo_draft,
-            )
-            chunks = load_reference_chunks()
-            retrieved = retrieve_references(query, chunks, top_k=retrieval_count)
-            st.session_state["rag_retrieved"] = retrieved
-            st.session_state["rag_draft"] = generate_demo_draft(retrieved)
+        if not query.strip():
+            st.warning("Please enter a question first.")
+        else:
             try:
-                DATA_DIR.mkdir(parents=True, exist_ok=True)
-                DRAFT_FILE.write_text(st.session_state["rag_draft"], encoding="utf-8")
-                st.session_state["rag_saved"] = True
-            except OSError:
+                response = requests.post(
+                    "http://127.0.0.1:8000/api/ai-draft",
+                    json={
+                        "query": query,
+                        "k": retrieval_count,
+                    },
+                    timeout=180,
+                )
+                response.raise_for_status()
+                result = response.json()
+
+                st.session_state["rag_retrieved"] = result.get(
+                    "references", []
+                )
+                st.session_state["rag_draft"] = result.get("draft", "")
                 st.session_state["rag_saved"] = False
-        except Exception as exc:
-            st.error("Reference retrieval could not run. Check the RAG engine and its dependencies.")
-            st.exception(exc)
+
+                try:
+                    DATA_DIR.mkdir(parents=True, exist_ok=True)
+                    DRAFT_FILE.write_text(
+                        str(st.session_state["rag_draft"]),
+                        encoding="utf-8",
+                    )
+                    st.session_state["rag_saved"] = True
+                except OSError as exc:
+                    st.warning(
+                        f"Draft generated but could not be saved: {exc}"
+                    )
+
+                st.success("Draft generated successfully through the backend.")
+
+            except requests.RequestException as exc:
+                st.error(
+                    "Could not connect to the LabelGuard AI backend. "
+                    "Ensure FastAPI is running on port 8000."
+                )
+                st.caption(str(exc))
+            except (ValueError, KeyError) as exc:
+                st.error(f"The backend returned an unexpected response: {exc}")
 
     if "rag_retrieved" in st.session_state:
         st.subheader("Retrieved reference chunks")
         retrieved = st.session_state["rag_retrieved"]
+
         if retrieved:
             for index, chunk in enumerate(retrieved, start=1):
-                with st.expander(f"Reference chunk {index}", expanded=(index == 1)):
+                with st.expander(
+                    f"Reference chunk {index}",
+                    expanded=(index == 1),
+                ):
                     st.write(chunk)
         else:
             st.info("No reference chunks were returned for this query.")
+
         st.subheader("Draft preview")
         st.text_area(
             "Demonstration draft",
             value=st.session_state.get("rag_draft", ""),
             height=240,
         )
+
         if st.session_state.get("rag_saved"):
             st.success("Draft preview saved to data/label_draft.txt.")
         else:
-            st.info("Draft is available in this session but could not be saved to disk.")
+            st.info(
+                "Draft is available in this session but could not be saved to disk."
+            )
+
         st.download_button(
             "Download draft",
             data=st.session_state.get("rag_draft", ""),
@@ -1429,7 +1572,7 @@ elif page == "AI Draft Lab":
         )
 
     st.info(
-        "The current generator is template-based, not a live LLM. Reference material is "
-        "demonstration content and must be independently reviewed."
+        "The current generator is template-based, not a live LLM. "
+        "Reference material is demonstration content and must be independently reviewed."
     )
     footer()
