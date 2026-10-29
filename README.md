@@ -91,6 +91,18 @@ AI-BASED-MEDICAL-DEVICE-LABELING/
 └── README.md
 ```
 
+## 📂 Outputs and Deployed Link
+
+<p align="center">
+  <img
+    src="LabelGuard%20AI%20Prototype%20Dashboard.png"
+    alt="LabelGuard AI Prototype Dashboard"
+    width="100%"
+  />
+</p>
+
+DEPLOYED LINK - https://ai-based-medical-device-labeling.streamlit.app/
+
 ## 🚀 Installation & Setup
 
 ### Prerequisites
